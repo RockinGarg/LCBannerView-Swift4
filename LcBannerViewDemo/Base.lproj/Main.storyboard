@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="LcBannerViewDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aDJ-aO-SLF" customClass="LCBannerView">
+                                <rect key="frame" x="16" y="30" width="288" height="114"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="CxM-Zd-rxb">
+                                <rect key="frame" x="0.0" y="154" width="320" height="414"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="dYe-bg-lPM">
+                                    <size key="itemSize" width="275" height="149"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="DSo-B2-KnJ" customClass="CustomCollectionCell" customModule="LcBannerViewDemo" customModuleProvider="target">
+                                        <rect key="frame" x="22.5" y="0.0" width="275" height="149"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="275" height="149"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Ob-sl-Jfn">
+                                                    <rect key="frame" x="0.0" y="0.0" width="275" height="149"/>
+                                                    <subviews>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AGf-ey-zuM">
+                                                            <rect key="frame" x="0.0" y="104.5" width="275" height="44.5"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DemoCell" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BQQ-wc-gAm">
+                                                                    <rect key="frame" x="108" y="14" width="59" height="16"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <constraints>
+                                                                <constraint firstItem="BQQ-wc-gAm" firstAttribute="centerY" secondItem="AGf-ey-zuM" secondAttribute="centerY" id="JwJ-y6-TMk"/>
+                                                                <constraint firstItem="BQQ-wc-gAm" firstAttribute="centerX" secondItem="AGf-ey-zuM" secondAttribute="centerX" id="sT6-jt-QCJ"/>
+                                                            </constraints>
+                                                        </view>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XTk-Dj-2Yb" customClass="LCBannerView">
+                                                            <rect key="frame" x="0.0" y="0.0" width="275" height="104.5"/>
+                                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </view>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstItem="AGf-ey-zuM" firstAttribute="leading" secondItem="6Ob-sl-Jfn" secondAttribute="leading" id="AdD-rW-vSd"/>
+                                                        <constraint firstAttribute="trailing" secondItem="XTk-Dj-2Yb" secondAttribute="trailing" id="Nh8-Dh-kgt"/>
+                                                        <constraint firstItem="AGf-ey-zuM" firstAttribute="height" secondItem="6Ob-sl-Jfn" secondAttribute="height" multiplier="0.3" id="Xo3-6H-awI"/>
+                                                        <constraint firstItem="XTk-Dj-2Yb" firstAttribute="top" secondItem="6Ob-sl-Jfn" secondAttribute="top" id="ZLe-A9-LId"/>
+                                                        <constraint firstAttribute="trailing" secondItem="AGf-ey-zuM" secondAttribute="trailing" id="dcI-2E-r4u"/>
+                                                        <constraint firstAttribute="bottom" secondItem="AGf-ey-zuM" secondAttribute="bottom" id="jay-1i-VZY"/>
+                                                        <constraint firstItem="AGf-ey-zuM" firstAttribute="top" secondItem="XTk-Dj-2Yb" secondAttribute="bottom" id="uy1-FV-e1s"/>
+                                                        <constraint firstItem="XTk-Dj-2Yb" firstAttribute="leading" secondItem="6Ob-sl-Jfn" secondAttribute="leading" id="wil-ZM-bRy"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="6Ob-sl-Jfn" firstAttribute="top" secondItem="DSo-B2-KnJ" secondAttribute="top" id="G0V-FA-MVj"/>
+                                            <constraint firstAttribute="bottom" secondItem="6Ob-sl-Jfn" secondAttribute="bottom" id="MLq-KA-iBa"/>
+                                            <constraint firstItem="6Ob-sl-Jfn" firstAttribute="leading" secondItem="DSo-B2-KnJ" secondAttribute="leading" id="neO-Dk-3cR"/>
+                                            <constraint firstAttribute="trailing" secondItem="6Ob-sl-Jfn" secondAttribute="trailing" id="ro9-8Z-yhp"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="cellBannerView" destination="XTk-Dj-2Yb" id="NE1-8T-2ld"/>
+                                            <outlet property="cellLabel" destination="BQQ-wc-gAm" id="BTC-qa-wvy"/>
+                                            <outlet property="cellLabelView" destination="AGf-ey-zuM" id="E4B-fP-6N8"/>
+                                            <outlet property="cellbaseView" destination="6Ob-sl-Jfn" id="Fl0-FJ-u6m"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="CxM-Zd-rxb" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="4dr-86-Vqw"/>
+                            <constraint firstItem="aDJ-aO-SLF" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.2" id="Dko-vg-lEF"/>
+                            <constraint firstItem="CxM-Zd-rxb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Qhk-ga-HsC"/>
+                            <constraint firstItem="aDJ-aO-SLF" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="QtG-Pm-Om5"/>
+                            <constraint firstItem="CxM-Zd-rxb" firstAttribute="top" secondItem="aDJ-aO-SLF" secondAttribute="bottom" constant="10" id="Ysf-UX-Yl3"/>
+                            <constraint firstItem="aDJ-aO-SLF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="aLo-99-UKP"/>
+                            <constraint firstItem="CxM-Zd-rxb" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="bji-nk-EfF"/>
+                            <constraint firstItem="aDJ-aO-SLF" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.9" id="i3U-Nc-IcJ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="DemoCollectionView" destination="CxM-Zd-rxb" id="qDb-Vz-6OF"/>
+                        <outlet property="baseBannerView" destination="aDJ-aO-SLF" id="DlO-5t-ZPD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="93.75" y="117.25352112676056"/>
+        </scene>
+    </scenes>
+</document>
